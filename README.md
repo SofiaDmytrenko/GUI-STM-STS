@@ -41,10 +41,10 @@ The software was tested and validated using real experimental data, confirming i
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/SofiaDmytrenko/GUI-STM-S-final
 ```
 ``` bash
-cd <repository-name>
+cd GUI-STM-S-final
 ```
 
 Create a virtual environment:
@@ -89,13 +89,18 @@ Available measurement channels will be displayed.
 </p>
 
 Select a channel to view its topography or spectroscopic curves.
-<p align="center">
-  <img src="images/topo_viewer.png" width="60%"/>
-</p>
-
-<p align="center">
-  <img src="images/sts_viewer.png" width="60%"/>
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/topo_viewer.png" width="45%"/>
+      <p>Topo Viewer</p>
+    </td>
+    <td align="center">
+      <img src="images/sts_viewer.png" width="45%"/>
+      <p>STS Viewer</p>
+    </td>
+  </tr>
+</table>
 
 Apply the built-in signal processing tools to the curves:
 - normalization
@@ -105,13 +110,18 @@ Apply the built-in signal processing tools to the curves:
 - averaging
 - differentiating
 
-<p align="center">
-  <img src="images/fit_gauss.png" width="60%"/>
-</p>
-
-<p align="center">
-  <img src="images/fer_peaks.png" width="60%"/>
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/fit_gauss.png" width="45%"/>
+      <p>FitGauss</p>
+    </td>
+    <td align="center">
+      <img src="images/fer_peaks.png" width="45%"/>
+      <p>FER peak positions</p>
+    </td>
+  </tr>
+</table>
 
 Use the automatic peak detection and Gaussian fitting module to extract parameters such as:
 - peak position
