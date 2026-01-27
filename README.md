@@ -92,11 +92,11 @@ Select a channel to view its topography or spectroscopic curves.
 <table>
   <tr>
     <td align="center">
-      <img src="images/topo_viewer.png" width="45%"/>
+      <img src="images/topo_viewer.png"/>
       <p>Topo Viewer</p>
     </td>
     <td align="center">
-      <img src="images/sts_viewer.png" width="45%"/>
+      <img src="images/sts_viewer.png"/>
       <p>STS Viewer</p>
     </td>
   </tr>
@@ -113,11 +113,11 @@ Apply the built-in signal processing tools to the curves:
 <table>
   <tr>
     <td align="center">
-      <img src="images/fit_gauss.png" width="45%"/>
+      <img src="images/fit_gauss.png"/>
       <p>FitGauss</p>
     </td>
     <td align="center">
-      <img src="images/fer_peaks.png" width="45%"/>
+      <img src="images/fer_peaks.png"/>
       <p>FER peak positions</p>
     </td>
   </tr>
@@ -147,9 +147,9 @@ GUI-STS/
 |    |         ├── sts_toolbar.py         # Provides buttons for STS signal processing functions.
 |    |         ├── sts_processing.py      # Signal processing functions.
 |    |         └── fit_gauss.py           # Peak detection and Gaussian fitting.
-|    └── helpers/
+|    ├── helpers/
 |    |   ├── metadata_tab.py              # Module for displaying and searching metadata associated with measurement channels.
-|    |   ├── styles.py                    # Defines visual styles, themes, and GUI element appearance for consistency.
+|    |   └── styles.py                    # Defines visual styles, themes, and GUI element appearance for consistency.
 |    ├── data_parser.py                   # Module for reading `.sm4` and `.csv` files
 |    └── main_window.py                   # First window displayed; allows to open files, select channels and view file metadata.
 ├── main.py                               # Entry point to launch the GUI.
