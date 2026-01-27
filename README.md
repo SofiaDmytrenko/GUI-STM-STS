@@ -35,7 +35,6 @@ The software was tested and validated using real experimental data, confirming i
 - Python 3.11 or newer
 - Required Python packages are listed in `requirements.txt`
 
-
 ## Installation
 
 Clone the repository and navigate to the project directory:
@@ -52,14 +51,17 @@ Create a virtual environment:
 python -m venv .venv
 ```
 Activate the virtual environment:
+
 On Linux / macOS:
 ``` bash
 source .venv/bin/activate
 ```
+
 On Windows:
 ``` bash
 .venv\Scripts\activate
 ```
+
 
 Install the required dependencies:
 ``` bash
@@ -80,8 +82,11 @@ python main.py
 
 Click the "Open File" button and select a measurement file in .sm4 or .csv format.
 Available measurement channels will be displayed.
+![MainWindow screenshot](/images/main_window.png)
 
 Select a channel to view its topography or spectroscopic curves.
+![TopoViewer screenshot](/images/topo_viewer.png)
+![STSViewer screenshot](/images/sts_viewer.png)
 
 Apply the built-in signal processing tools to the curves:
 - normalization
@@ -89,7 +94,7 @@ Apply the built-in signal processing tools to the curves:
 - subtracting
 - dividing
 - averaging
-- differentiation
+- differentiating
 
 Use the automatic peak detection and Gaussian fitting module to extract parameters such as:
 - peak position
@@ -99,33 +104,37 @@ Use the automatic peak detection and Gaussian fitting module to extract paramete
 
 Viewing Metadata
 Metadata for each measurement channel is available within the GUI and can be searched or filtered as needed.
+![MetadataTab screenshot](/images/metadata_tab.png)
+
+
 
 ## Project structure
-
-## Project Structure
-
-``` bash
+<pre>
 GUI-STS/
-├── gui/                    # Main Python code for the GUI tool
-|    ├── channel_viewers/     
-|    |   ├── topo_viewer.py     
-|    |   └── sts_viewer_folder/
-|    |         ├── sts_viewer.py
-|    |         ├── sts_toolbar.py
-|    |         ├── sts_processing.py      # Signal processing functions
-|    |         └── fit_gauss.py     # Peak detection and Gaussian fitting
-|    └── helpers/  
-|    |   ├── metadata_tab.py
-|    |   ├── styles.py
-|    ├── data_parser.py    # Module for reading .sm4 and .csv files
-|    └── main_window.py
-├── main.py                # Entry point to launch the GUI
-├── requirements.txt       # Python dependencies
-├── README.md              # Project documentation
-├── .github                # ---
-├── .gitignore             # Files and folders to ignore in version control
-└── images/                # Screenshots for README or documentation
-```
+├── gui/                                  # Main GUI folder containing modules that define windows, toolbars, viewers, and layouts.
+|    ├── channel_viewers/                 # Folder containing modules for STS data visualization and channel-specific analysis.
+|    |   ├── topo_viewer.py               # Module responsible for displaying STM topography images.
+|    |   └── sts_viewer_folder/           # Folder containing modules for visualizing and interacting with STS spectroscopy data.
+|    |         ├── sts_viewer.py          # Main module for analyzing STS curves.
+|    |         ├── sts_toolbar.py         # Provides buttons for STS signal processing functions.
+|    |         ├── sts_processing.py      # Signal processing functions.
+|    |         └── fit_gauss.py           # Peak detection and Gaussian fitting.
+|    └── helpers/                         # Collection of utility modules for supporting tasks.
+|    |   ├── metadata_tab.py              # Module for displaying and searching metadata associated with measurement channels.
+|    |   ├── styles.py                    # Defines visual styles, themes, and GUI element appearance for consistency.
+|    ├── data_parser.py                   # Module for reading .sm4 and .csv files
+|    └── main_window.py                   # First window displayed; allows to open files, select channels and view file metadata.
+├── main.py                               # Entry point to launch the GUI.
+├── requirements.txt                      # Python dependencies.
+├── .github                               # GitHub-specific configuration, workflows or actions.
+├── .gitignore                            # Files and folders to ignore in version control
+├── README.md                             # Project documentation
+└── images/                               # Folder for screenshots used in the README.
+    ├── main_window.png                   # Screenshot of main_window
+    ├── sts_viewer.png                    # Screenshot of sts_viewer
+    ├── topo_viewer.png                   # Screenshot of topo_viewer
+    └── metadata_tab.png                  # Screenshot of metadata_tab
+</pre>
 
 ## Testing
 
@@ -135,7 +144,7 @@ The functionality was validated manually using experimental STM/STS data.
 
 ## Limitations
 
-- Supported file formats: .sm4 and .csv
+- Supported file formats: `.sm4` and `.csv`
 - Currently, only **Gaussian fitting** is implemented; other theoretical functions (Lorentzian, exponential, etc.) are not supported. 
 - When saving data in `.csv` format, **only one measurement channel can be saved at a time**.  
 - **Normalization cannot be performed correctly** on `.csv` data if the corresponding I–V curve ("Current" channel) is missing, since normalization requires the current measurements for accurate processing.
