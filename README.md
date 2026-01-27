@@ -43,7 +43,6 @@ Clone the repository and navigate to the project directory:
 ```bash
 git clone <repository-url>
 ```
-
 ``` bash
 cd <repository-name>
 ```
@@ -53,12 +52,10 @@ Create a virtual environment:
 python -m venv .venv
 ```
 Activate the virtual environment:
-
 On Linux / macOS:
 ``` bash
 source .venv/bin/activate
 ```
-
 On Windows:
 ``` bash
 .venv\Scripts\activate
@@ -72,22 +69,21 @@ pip install -r requirements.txt
 ## Usage
 
 After installing the requirements and activating the virtual environment, run the GUI tool using:
-
 ```bash
 python main.py
 ```
 
-Note: The program is intended to be run from a Python IDE (e.g., PyCharm, VS Code) or from the terminal. Make sure the virtual environment is active before running the script.
+> [!NOTE]
+> The program is intended to be run from a Python IDE (e.g., PyCharm, VS Code) or from the terminal. Make sure the virtual environment is active before running the script.
 
 ### Loading and Visualizing Data
 
 Click the "Open File" button and select a measurement file in .sm4 or .csv format.
 Available measurement channels will be displayed.
 
-Select a channel to view its topography and spectroscopic curves.
+Select a channel to view its topography or spectroscopic curves.
 
 Apply the built-in signal processing tools to the curves:
-
 - normalization
 - filtering
 - subtracting
@@ -99,7 +95,7 @@ Use the automatic peak detection and Gaussian fitting module to extract paramete
 - peak position
 - amplitude
 - standard deviation (σ)
-  - work function of the material
+- work function of the material
 
 Viewing Metadata
 Metadata for each measurement channel is available within the GUI and can be searched or filtered as needed.
@@ -108,6 +104,7 @@ Metadata for each measurement channel is available within the GUI and can be sea
 
 ## Project Structure
 
+``` bash
 GUI-STS/
 ├── gui/                    # Main Python code for the GUI tool
 |    ├── channel_viewers/     
@@ -128,7 +125,7 @@ GUI-STS/
 ├── .github                # ---
 ├── .gitignore             # Files and folders to ignore in version control
 └── images/                # Screenshots for README or documentation
-
+```
 
 ## Testing
 
