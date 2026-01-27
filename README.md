@@ -35,6 +35,7 @@ The software was tested and validated using real experimental data, confirming i
 - Python 3.11 or newer
 - Required Python packages are listed in `requirements.txt`
 
+
 ## Installation
 
 Clone the repository and navigate to the project directory:
@@ -68,6 +69,7 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
+
 ## Usage
 
 After installing the requirements and activating the virtual environment, run the GUI tool using:
@@ -82,11 +84,18 @@ python main.py
 
 Click the "Open File" button and select a measurement file in .sm4 or .csv format.
 Available measurement channels will be displayed.
-![MainWindow screenshot](/images/main_window.png)
+<p align="center">
+  <img src="images/main_window.png" width="60%"/>
+</p>
 
 Select a channel to view its topography or spectroscopic curves.
-![TopoViewer screenshot](/images/topo_viewer.png)
-![STSViewer screenshot](/images/sts_viewer.png)
+<p align="center">
+  <img src="images/topo_viewer.png" width="60%"/>
+</p>
+
+<p align="center">
+  <img src="images/sts_viewer.png" width="60%"/>
+</p>
 
 Apply the built-in signal processing tools to the curves:
 - normalization
@@ -96,33 +105,38 @@ Apply the built-in signal processing tools to the curves:
 - averaging
 - differentiating
 
+<p align="center">
+  <img src="images/fit_gauss.png" width="60%"/>
+</p>
+
 Use the automatic peak detection and Gaussian fitting module to extract parameters such as:
 - peak position
 - amplitude
 - standard deviation (σ)
 - work function of the material
 
-Viewing Metadata
+### Viewing Metadata
 Metadata for each measurement channel is available within the GUI and can be searched or filtered as needed.
-![MetadataTab screenshot](/images/metadata_tab.png)
-
+<p align="center">
+  <img src="images/metadata_tab.png" width="60%"/>
+</p>
 
 
 ## Project structure
 <pre>
 GUI-STS/
 ├── gui/                                  # Main GUI folder containing modules that define windows, toolbars, viewers, and layouts.
-|    ├── channel_viewers/                 # Folder containing modules for STS data visualization and channel-specific analysis.
+|    ├── channel_viewers/
 |    |   ├── topo_viewer.py               # Module responsible for displaying STM topography images.
-|    |   └── sts_viewer_folder/           # Folder containing modules for visualizing and interacting with STS spectroscopy data.
+|    |   └── sts_viewer_folder/ 
 |    |         ├── sts_viewer.py          # Main module for analyzing STS curves.
 |    |         ├── sts_toolbar.py         # Provides buttons for STS signal processing functions.
 |    |         ├── sts_processing.py      # Signal processing functions.
 |    |         └── fit_gauss.py           # Peak detection and Gaussian fitting.
-|    └── helpers/                         # Collection of utility modules for supporting tasks.
+|    └── helpers/
 |    |   ├── metadata_tab.py              # Module for displaying and searching metadata associated with measurement channels.
 |    |   ├── styles.py                    # Defines visual styles, themes, and GUI element appearance for consistency.
-|    ├── data_parser.py                   # Module for reading .sm4 and .csv files
+|    ├── data_parser.py                   # Module for reading `.sm4` and `.csv` files
 |    └── main_window.py                   # First window displayed; allows to open files, select channels and view file metadata.
 ├── main.py                               # Entry point to launch the GUI.
 ├── requirements.txt                      # Python dependencies.
@@ -130,10 +144,10 @@ GUI-STS/
 ├── .gitignore                            # Files and folders to ignore in version control
 ├── README.md                             # Project documentation
 └── images/                               # Folder for screenshots used in the README.
-    ├── main_window.png                   # Screenshot of main_window
-    ├── sts_viewer.png                    # Screenshot of sts_viewer
-    ├── topo_viewer.png                   # Screenshot of topo_viewer
-    └── metadata_tab.png                  # Screenshot of metadata_tab
+    ├── main_window.png
+    ├── sts_viewer.png
+    ├── topo_viewer.png
+    └── metadata_tab.png
 </pre>
 
 ## Testing
