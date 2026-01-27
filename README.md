@@ -109,6 +109,10 @@ Apply the built-in signal processing tools to the curves:
   <img src="images/fit_gauss.png" width="60%"/>
 </p>
 
+<p align="center">
+  <img src="images/fer_peaks.png" width="60%"/>
+</p>
+
 Use the automatic peak detection and Gaussian fitting module to extract parameters such as:
 - peak position
 - amplitude
