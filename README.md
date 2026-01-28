@@ -161,6 +161,8 @@ GUI-STS/
     ├── main_window.png
     ├── sts_viewer.png
     ├── topo_viewer.png
+    ├── fit_gauss.png
+    ├── fer_peaks.png
     └── metadata_tab.png
 </pre>
 
