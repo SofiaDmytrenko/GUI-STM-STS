@@ -41,10 +41,10 @@ The software was tested and validated using real experimental data, confirming i
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/SofiaDmytrenko/GUI-STM-S-final
+git clone https://github.com/SofiaDmytrenko/GUI-STM-STS
 ```
 ``` bash
-cd GUI-STM-S-final
+cd GUI-STM-STS
 ```
 
 Create a virtual environment:
